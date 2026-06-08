@@ -399,6 +399,10 @@
       padding: 100px 56px;
     }
 
+    .program-part-badge {
+      justify-content: center;
+    }
+
     .program-header {
       display: flex;
       justify-content: space-between;
@@ -1007,7 +1011,7 @@
 
     .hero-meta-line {
       margin-top: 28px;
-      font-size: 13px;
+      font-size: 16px;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       color: rgba(244, 240, 233, 0.66);
@@ -1135,9 +1139,10 @@
     }
 
     .hero-meta-line {
-      font-size: 17px;
-      color: rgba(255, 255, 255, .82);
+      font-size: 20px;
+      color: rgba(255, 255, 255, .85);
       font-weight: 500;
+      line-height: 1.5;
     }
 
     .hero-stat-num {
@@ -1353,17 +1358,19 @@
 
     .program-title {
       font-size: clamp(48px, 5.7vw, 82px);
-      line-height: 1.06;
-      letter-spacing: -.055em;
+      line-height: 1.2;
+      letter-spacing: -.05em;
       color: #F4F0E9;
       font-weight: 700;
     }
 
     .program-copy {
-      font-size: 22px;
+      font-size: 30px;
       line-height: 1.75;
       color: rgba(244, 240, 233, .76);
-      max-width: 560px;
+      max-width: 900px;
+      white-space: nowrap;
+      margin-left: -50px;
     }
 
     .program-cards {
@@ -1383,7 +1390,7 @@
       backdrop-filter: blur(12px);
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-start;
       overflow: hidden;
       transition: transform .35s ease, background .35s ease, border-color .35s ease;
     }
@@ -1435,22 +1442,39 @@
       line-height: .9;
       color: #91f0ce;
       font-weight: 500;
+      margin-bottom: 44px;
+      height: clamp(44px, 4.2vw, 64px);
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .program-time.always {
+      font-size: clamp(24px, 2.2vw, 34px);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.02em;
     }
 
     .program-card-body h3 {
       margin: 0 0 12px;
-      font-size: 24px;
+      font-size: clamp(18px, 2vw, 28px);
       line-height: 1.22;
       color: #fff;
       letter-spacing: -.04em;
       font-weight: 800;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: clip;
     }
 
     .program-card-body p {
       margin: 0;
-      font-size: 17px;
+      font-size: clamp(12px, 1.3vw, 17px);
       line-height: 1.55;
       color: rgba(244, 240, 233, .76);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: clip;
     }
 
     .timeline {
@@ -1495,8 +1519,9 @@
       }
 
       .hero-meta-line {
-        font-size: 14px;
-        max-width: 340px;
+        font-size: 16px;
+        max-width: 420px;
+        line-height: 1.5;
       }
 
       .opening,
@@ -1529,6 +1554,9 @@
 
       .program-copy {
         font-size: 18px;
+        white-space: normal;
+        word-break: keep-all;
+        margin-left: 0;
       }
 
       .program-cards {
@@ -1543,11 +1571,11 @@
       }
 
       .program-card-body h3 {
-        font-size: 24px;
+        font-size: clamp(20px, 4.5vw, 24px);
       }
 
       .program-card-body p {
-        font-size: 17px;
+        font-size: clamp(13px, 3.5vw, 15px);
       }
 
       .brand-body-text {
@@ -1734,6 +1762,41 @@
         padding: 8px 12px;
         gap: 7px;
       }
+
+      .program-part-badge {
+        flex-direction: column;
+        align-items: center !important;
+        gap: 16px !important;
+        margin: 40px 0 20px !important;
+      }
+
+      .program-part-badge>div {
+        padding: 8px 20px !important;
+      }
+
+      .program-part-badge>div>span {
+        font-size: 12px !important;
+        white-space: nowrap;
+      }
+
+      .program-part-badge>div>span:first-child {
+        letter-spacing: .1em !important;
+      }
+
+      .program-part-badge>div>span:nth-child(2) {
+        height: 14px !important;
+      }
+
+      .program-part-badge>div>span:last-child {
+        letter-spacing: .05em !important;
+      }
+
+      .program-part-badge>span {
+        font-size: 13px !important;
+        letter-spacing: .08em !important;
+        line-height: 1.5;
+        white-space: nowrap;
+      }
     }
   </style>
 </head>
@@ -1769,21 +1832,21 @@
       <div class="hero-tag hero-meaning"><span>ACON</span> = Angel · Creator · Of · New-wave</div>
       <h1 class="hero-title hero-slogan">YOUR ACTION,<br><span>NEW WAVE</span></h1>
       <p class="hero-korean">작은 움직임이<br class="mobile-break"> 새로운 흐름이 됩니다.</p>
-      <div class="hero-meta-line">June 30 · 5 PM - 8 PM · 세빛섬 FIC 컨벤션홀</div>
+      <div class="hero-meta-line">Aug 29 · 3 PM - 9 PM<BR>세빛섬 FIC 컨벤션홀 &amp; 반포한강공원</div>
     </div>
 
     <div class="hero-bottom">
       <div class="hero-stat">
-        <div class="hero-stat-num">200</div>
+        <div class="hero-stat-num">200+</div>
         <div class="hero-stat-label">Influencers</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-num">3H</div>
-        <div class="hero-stat-label">Premium Night</div>
+        <div class="hero-stat-num">2부</div>
+        <div class="hero-stat-label">행사 구성</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-num">FIC</div>
-        <div class="hero-stat-label">Convention Hall</div>
+        <div class="hero-stat-num">Aug 29</div>
+        <div class="hero-stat-label">2026</div>
       </div>
     </div>
 
@@ -1804,11 +1867,11 @@
           <div class="meta-key">Influencers</div>
         </div>
         <div class="meta-block">
-          <div class="meta-val">Jun 30</div>
+          <div class="meta-val">Aug 29</div>
           <div class="meta-key">Date</div>
         </div>
         <div class="meta-block">
-          <div class="meta-val">5PM</div>
+          <div class="meta-val">3PM</div>
           <div class="meta-key">Start Time</div>
         </div>
       </div>
@@ -1870,49 +1933,114 @@
     <div class="program-top reveal">
       <div>
         <div class="section-tag">Program</div>
-        <h2 class="program-title">3시간의 흐름이<br>한눈에 보이도록</h2>
+        <h2 class="program-title">2026. 8. 29 (토)<br>두 개의 무대,<br>하나의 ACON</h2>
       </div>
       <p class="program-copy">
-        복잡한 타임테이블 대신, 방문자가 바로 이해할 수 있는
-        핵심 장면 중심의 프로그램 구성입니다.
+        제1부 Angel Concert (세빛섬 FIC 컨벤션홀)<br>
+        제2부 ACON Summer Night Festival (반포한강공원 야외광장)
       </p>
+    </div>
+
+    <!-- 1부 뱃지 -->
+    <div class="program-part-badge reveal" style="display:flex;align-items:center;gap:24px;margin:56px 0 20px;">
+      <div
+        style="display:inline-flex;align-items:center;gap:14px;padding:12px 30px;border:1px solid var(--green);border-radius:100px;background:rgba(93,202,165,0.08);">
+        <span style="font-size:16px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--green);">제
+          1 부</span>
+        <span style="width:1px;height:20px;background:rgba(93,202,165,0.3);"></span>
+        <span style="font-size:16px;letter-spacing:.15em;color:rgba(232,228,220,0.6);">Angel Concert</span>
+      </div>
+      <span style="font-size:16px;letter-spacing:.12em;color:rgba(232,228,220,0.35);">15:00 – 18:00 &nbsp;·&nbsp; 세빛섬
+        FIC 컨벤션홀</span>
+    </div>
+
+    <div class="program-cards">
+      <article class="program-card reveal">
+        <div class="program-time">15:00</div>
+        <div class="program-card-body">
+          <h3>웰컴 체크인</h3>
+          <p>입장 등록 · 포토월 · 웰컴 드링크</p>
+        </div>
+      </article>
+      <article class="program-card reveal reveal-delay-1">
+        <div class="program-time">15:30</div>
+        <div class="program-card-body">
+          <h3>오프닝 스테이지</h3>
+          <p>캠페인 영상 · Angel Walk<BR>공식 개막 선언</p>
+        </div>
+      </article>
+      <article class="program-card reveal reveal-delay-2">
+        <div class="program-time">16:20</div>
+        <div class="program-card-body">
+          <h3>스폰서 & 파트너 소개</h3>
+          <p>귀빈 소개 · CSR 참여 선언<BR>기부 인증상 수여</p>
+        </div>
+      </article>
+      <article class="program-card program-card-feature reveal reveal-delay-2">
+        <div class="program-badge">Ceremony</div>
+        <div class="program-time">17:00</div>
+        <div class="program-card-body">
+          <h3>기부 커밋먼트 & 피날레</h3>
+          <p>기관 인사 · 기부 런웨이<BR>피날레 연출 · 기념촬영</p>
+        </div>
+      </article>
+      <article class="program-card reveal reveal-delay-3">
+        <div class="program-time">17:40</div>
+        <div class="program-card-body">
+          <h3>애프터 네트워킹</h3>
+          <p>인터뷰 · 브랜드 교류 · 자유 네트워킹</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- 2부 뱃지 -->
+    <div class="program-part-badge reveal" style="display:flex;align-items:center;gap:24px;margin:72px 0 20px;">
+      <div
+        style="display:inline-flex;align-items:center;gap:14px;padding:12px 30px;border:1px solid var(--green);border-radius:100px;background:rgba(93,202,165,0.08);">
+        <span style="font-size:16px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--green);">제
+          2 부</span>
+        <span style="width:1px;height:20px;background:rgba(93,202,165,0.3);"></span>
+        <span style="font-size:16px;letter-spacing:.15em;color:rgba(232,228,220,0.6);">ACON Summer Night Festival</span>
+      </div>
+      <span style="font-size:16px;letter-spacing:.12em;color:rgba(232,228,220,0.35);">17:00 – 21:00 &nbsp;·&nbsp; 반포한강공원
+        야외광장</span>
     </div>
 
     <div class="program-cards">
       <article class="program-card reveal">
         <div class="program-time">17:00</div>
         <div class="program-card-body">
-          <h3>웰컴 체크인</h3>
-          <p>입장 등록 · 포토월 · 웰컴 무드</p>
-        </div>
-      </article>
-      <article class="program-card reveal reveal-delay-1">
-        <div class="program-time">17:30</div>
-        <div class="program-card-body">
-          <h3>오프닝 스테이지</h3>
-          <p>행사 소개 · 공식 인사 · 브랜드 모먼트</p>
+          <h3>브랜드 팝업존</h3>
+          <p>참여 브랜드 체험 · 홍보 부스 운영</p>
         </div>
       </article>
       <article class="program-card program-card-feature reveal reveal-delay-2">
-        <div class="program-badge">Main</div>
         <div class="program-time">18:00</div>
         <div class="program-card-body">
-          <h3>인플루언서 파티</h3>
-          <p>네트워킹 · 브랜드존 · SNS 콘텐츠 확산</p>
+          <h3>크리에이터 플리마켓</h3>
+          <p>크리에이터·셀러 직접 참여<BR>수익 일부 기부 연계</p>
         </div>
       </article>
-      <article class="program-card reveal reveal-delay-2">
+      <article class="program-card reveal reveal-delay-1">
         <div class="program-time">19:00</div>
         <div class="program-card-body">
-          <h3>퍼포먼스 & 미디어 타임</h3>
-          <p>공연 · 촬영 · 공식 콘텐츠 제작</p>
+          <h3>여름밤 DJ 파티</h3>
+          <p>유명 DJ 초청 공연<BR>무소음 야외 댄스 퍼포먼스</p>
+        </div>
+      </article>
+
+      <article class="program-card reveal reveal-delay-2">
+        <div class="program-time always">상시</div>
+        <div class="program-card-body">
+          <h3>기부 참여존</h3>
+          <p>현장 참여형 기부 캠페인 · QR 기부<BR>사랑의 모금함 · 포토존 인증</p>
         </div>
       </article>
       <article class="program-card reveal reveal-delay-3">
-        <div class="program-time">20:00</div>
+        <div class="program-time always">상시</div>
         <div class="program-card-body">
-          <h3>클로징</h3>
-          <p>행사 마무리 · 애프터 콘텐츠 연결</p>
+          <h3>콘텐츠 크리에이션존</h3>
+          <p>인플루언서 인터뷰<BR>브랜드 협찬 콘텐츠 제작</p>
         </div>
       </article>
     </div>
